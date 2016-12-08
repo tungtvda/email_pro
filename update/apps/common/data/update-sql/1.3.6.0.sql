@@ -1,0 +1,3 @@
+--
+-- Update sql for Cyber Fision EMA from version 1.3.5.9 to 1.3.6.0
+--
