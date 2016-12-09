@@ -19,6 +19,9 @@
     <title><?php echo CHtml::encode($pageMetaTitle);?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo CHtml::encode($pageMetaDescription);?>">
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://cyberfision.com/wp-content/uploads/2016/07/favicon.x21009.png">
+    <link rel="apple-touch-icon" href="https://cyberfision.com/wp-content/uploads/2016/07/favicon.x21009.png"/>
     <!--[if lt IE 9]>
       <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
