@@ -87,7 +87,7 @@ if ($viewCollection->renderContent) {
                     <?php echo $form->textField($model, 'market_place', $model->getHtmlOptions('market_place')); ?>
                     <?php echo $form->error($model, 'market_place');?>
                 </div>
-                <div class="form-group col-lg-4">
+                <div hidden class="form-group col-lg-4">
                     <?php echo $form->labelEx($model, 'purchase_code');?>
                     <?php echo $form->textField($model, 'purchase_code', $model->getHtmlOptions('purchase_code')); ?>
                     <?php echo $form->error($model, 'purchase_code');?>

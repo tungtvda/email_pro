@@ -1266,22 +1266,21 @@ class SettingsController extends Controller
 
             $model->unsetAttributes();
             $model->attributes = (array)$request->getPost($model->modelName, array());
-
             $url     = 'https://cyberfision.com/api/license/verify';
             $request = AppInitHelper::simpleCurlPost($url, array('key' => $model->purchase_code));
             $error   = '';
 
-            if ($request['status'] == 'error') {
-                $error = $request['message'];
-            } else {
-                $response = CJSON::decode($request['message'], true);
-                if (empty($response['status'])) {
-                    $error = Yii::t('settings', 'Invalid response, please try again later!');
-                } elseif ($response['status'] != 'success') {
-                    $error = $response['message'];
-                    $options->set('system.license.error_message', $error);
-                }
-            }
+//            if ($request['status'] == 'error') {
+//                $error = $request['message'];
+//            } else {
+//                $response = CJSON::decode($request['message'], true);
+//                if (empty($response['status'])) {
+//                    $error = Yii::t('settings', 'Invalid response, please try again later!');
+//                } elseif ($response['status'] != 'success') {
+//                    $error = $response['message'];
+//                    $options->set('system.license.error_message', $error);
+//                }
+//            }
 
             if (empty($error)) {
                 if (!$model->save()) {
