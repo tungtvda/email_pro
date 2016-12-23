@@ -117,7 +117,7 @@ class OptionCustomization extends OptionBase
             'linkUrl'   => Yii::app()->createUrl('dashboard/index'),
             'linkClass' => 'logo icon',
         ), $options);
-        
+
         if ($url = $instance->getLogoUrlByApp($options['app'], 210, 50)) {
             $text = CHtml::image($url, '', array('width' => 210, 'height' => 50));
         } elseif ($_text = $instance->getLogoTextByApp($options['app'])) {

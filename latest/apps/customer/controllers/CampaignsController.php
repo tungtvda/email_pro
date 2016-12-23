@@ -186,6 +186,7 @@ class CampaignsController extends Controller
             if ($collection->success) {
                 $this->redirect(array('campaigns/setup', 'campaign_uid' => $campaign->campaign_uid));
             }
+
         }
 
         $listsArray      = CMap::mergeArray(array('' => Yii::t('app', 'Choose')), $campaign->getListsDropDownArray());
